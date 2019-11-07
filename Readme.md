@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Петухов](https://up.htmlacademy.ru/adaptive/18/user/993615).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Корейкин](https://github.com/ankormoreankor).
 
 ---
 
