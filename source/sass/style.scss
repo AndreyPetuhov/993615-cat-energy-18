@@ -2,5 +2,10 @@
 @import "global/fonts";
 @import "global/global.scss";
 @import "global/common.scss";
+@import "global/mixins.scss";
 @import "blocks/page-header.scss";
-@import "blocks/main-nav.scss"
+@import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/selection-program.scss";
+@import "blocks/categories.scss";
+@import "blocks/advantages.scss";

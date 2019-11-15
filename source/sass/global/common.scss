@@ -19,3 +19,18 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  font: inherit;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #68b738;
+  border: none;
+}
