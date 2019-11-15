@@ -1,4 +1,6 @@
-@import "blocks/variables.scss";
-@import "blocks/fonts";
-@import "blocks/global.scss";
-@import "blocks/common.scss";
+@import "global/variables.scss";
+@import "global/fonts";
+@import "global/global.scss";
+@import "global/common.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss"
