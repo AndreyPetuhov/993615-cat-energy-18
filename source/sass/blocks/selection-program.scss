@@ -1,25 +1,22 @@
 .selection-program {
-  font-family: "Oswald", 'Arial', sans-serif;
-  color: #ffffff;
+  font-family: $oswald;
+  color: $white;
   font-weight: 400;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  @include bg-img("index-background-mobile.jpg");
   background-position: 50% 0;
-  background-repeat: no-repeat;
   text-align: center;
   padding-top: 28px;
 }
 
 .selection-program__title {
-  font-size: 36px;
-  line-height: 36px;
-  margin: 0;
+  @include font (36px, 36px);
+  margin-top: 0;
   margin-bottom: 28px;
 }
 
 .selection-program__slogan {
   display: block;
-  font-size: 14px;
-  line-height: 14px;
+  @include font (14px, 14px);
   text-transform: uppercase;
   margin-bottom: 302px;
 }

@@ -1,0 +1,44 @@
+.example {
+  background-color: $bg-grey;
+  padding-top: 30px;
+  padding-bottom: 36px;
+}
+
+.example__title {
+  font-family: $oswald;
+  @include font(36px, 60px);
+  color: $black;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.example__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__indicator {
+  width: 128px;
+  text-align: center;
+}
+
+.example__value {
+  font-family: $oswald;
+  @include font(24px, 24px);
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  padding: 12px 22px;
+  margin: 0;
+}
+
+.example__name {
+  @include font(12px, 12px);
+}
+
+.exemple__total {
+  font-family: $oswald;
+  @include font(14px, 20px);
+  text-transform: uppercase;
+  padding-left: 47px;
+}

@@ -1,0 +1,12 @@
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__toggle {
+  font-family: $oswald;
+  @include font(16px, 20px);
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
