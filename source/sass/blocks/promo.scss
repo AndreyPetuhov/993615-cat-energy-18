@@ -1,0 +1,19 @@
+.promo {
+  margin-bottom: 35px;
+}
+
+.promo__wrapper {
+  text-align: center;
+  @include bg-img("gift-photo-mobile@1x.jpg");
+  background-position: 0 40px;
+  min-height: 328px;
+  border-top: 1px solid $brd;
+  padding-top: 214px;
+  ;
+}
+
+.promo__text {
+  font-family: Arial;
+  @include font(16px, 20px);
+  color: $white;
+}

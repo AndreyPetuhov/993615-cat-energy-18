@@ -1,15 +1,14 @@
 .example {
   background-color: $bg-grey;
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 36px;
 }
 
 .example__title {
-  font-family: $oswald;
   @include font(36px, 60px);
   color: $black;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 .example__wrapper {
@@ -20,25 +19,34 @@
 .example__indicator {
   width: 128px;
   text-align: center;
+  margin-top: 0;
 }
 
 .example__value {
-  font-family: $oswald;
   @include font(24px, 24px);
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
   border-radius: 2px;
-  padding: 12px 22px;
+  padding: 12px 22px 17px;
   margin: 0;
 }
 
 .example__name {
+  font-family: Arial;
+  color: $f-color;
   @include font(12px, 12px);
 }
 
 .exemple__total {
-  font-family: $oswald;
   @include font(14px, 20px);
   text-transform: uppercase;
   padding-left: 47px;
+}
+
+.example__description {
+  font-family: Arial;
+  @include font(14px, 18px);
+  color: $f-color;
+  margin-top: 0;
+  margin-bottom: 25px;
 }

@@ -1,0 +1,30 @@
+.product-item .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.product-item__wrapper {
+  width: 140px;
+}
+
+.product-item__product-name {
+  @include font(16px, 20px);
+  text-transform: uppercase;
+}
+
+.product-item__description {
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $f-color;
+}
+
+.product-item__button {
+  width: 100%;
+}
+
+.product-item__wrapper {
+  display: flex;
+  justify-content: space-between;
+}

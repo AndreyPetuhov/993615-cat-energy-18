@@ -1,0 +1,78 @@
+.form {
+  border-top: 1px solid $brd3;
+  padding-top: 10px;
+  margin-bottom: 34px;
+}
+
+.form__title {
+  @include font(36px, 60px);
+  margin-top: 0;
+}
+
+.form__description {
+  @include font(14px, 18px);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.form__label {
+  @include font(16px, 18px);
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+.form__group {
+  border: none;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.form__legend {
+  @include font(24px, 28px);
+  margin-bottom: 30px;
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form__note {
+  font-family: Arial;
+  @include font(14px, 16px);
+  color: $f-color;
+  padding-left: 60px;
+}
+
+.form-field {
+  height: 45px;
+  margin-bottom: 14px;
+  padding-left: 16px;
+  border: 1px solid $brd3;
+  flex-grow: 1;
+}
+
+
+.form-field::-webkit-input-placeholder,
+.form__input-textarea {
+  color: $f-color;
+  font-family: "oswald", Arial, sans-serif;
+  @include font(16px, 18px);
+  text-transform: uppercase;
+}
+
+.form__item--long {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form__input-textarea {
+  border: 1px solid $brd3;
+  padding: 16px;
+  resize: none;
+  height: 150px;
+  width: 280px;
+}

@@ -1,0 +1,24 @@
+.extra-product-item__title {
+  @include font(16px, 16px);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.extra-product-item__description {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-family: Arial;
+  @include font(14px, 14px);
+  color: $f-color;
+}
+
+.extra-product-item__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.extra-product-item__button {
+  width: 100%;
+}

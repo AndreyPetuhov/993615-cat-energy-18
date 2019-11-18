@@ -6,15 +6,17 @@
 
 .contacts__title {
   width: 50%;
-  font-family: $oswald;
+
   @include font(16px, 20px);
   text-transform: uppercase;
 }
 
 .contacts__address {
-  width: 50%;
+  font-family: Arial;
+  color: $f-color;
   @include font(14px, 20px);
   font-style: normal;
+  width: 50%;
 }
 
 .contacts__map-wrapper {
@@ -22,4 +24,8 @@
   @include bg-img("bg-map-mobile@1x.png");
   background-position: 50% 0;
   text-align: center;
+}
+
+.contacts--grey {
+  background-color: $bg-grey;
 }

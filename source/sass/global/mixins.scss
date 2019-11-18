@@ -4,10 +4,6 @@
   font-weight: $font-weight;
 }
 
-@mixin bg-img($img-name) {
-  background-image: url("../../img/$img-name");
-}
-
 @mixin bg-img($img, $repeat: no-repeat) {
   background-image: url("../img/#{$img}");
   background-repeat: $repeat;

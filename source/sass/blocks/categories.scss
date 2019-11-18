@@ -1,12 +1,11 @@
 .categories__item {
   background-color: $bg-grey;
-  padding: 22px 30px;
-  margin-bottom: 20px;
+  padding: 37px 21px 0px;
+  margin-bottom: 18px;
 }
 
 .categories__title,
 .categories__link {
-  font-family: $oswald;
   text-transform: uppercase;
   color: $black;
 }
@@ -14,15 +13,22 @@
 .categories__title {
   @include font(24px, 27px);
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+  padding-left: 71px;
 }
 
 
 .categories__description {
-  margin: 0;
-  margin-bottom: 45px;
+  font-family: Arial;
+  @include font(14px, 18px);
+  color: $f-color;
+  margin-bottom: 0;
+  margin-bottom: 23px;
 }
 
 .categories__link {
+  display: block;
   @include font(16px, 16px);
+  padding: 21px 0;
+  border-top: 1px solid $brd2;
 }

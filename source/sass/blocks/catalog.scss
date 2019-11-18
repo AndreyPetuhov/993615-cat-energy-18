@@ -1,0 +1,36 @@
+.catalog__title {
+  @include font(36px, 60px);
+  margin-top: 0;
+}
+
+.catalog__item {
+  margin-bottom: 25px;
+  border-top: 1px solid $brd1;
+}
+
+.catalog__next-items {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.catalog__next-items-title {
+  @include font(16px, 20px);
+  text-transform: uppercase;
+  padding-top: 82px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.catalog__next-items-text {
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.catalog__button {
+  background-color: $bg-grey;
+  color: $f-color;
+  width: 100%;
+}

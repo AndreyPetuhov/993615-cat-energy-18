@@ -1,6 +1,15 @@
+.site-list {
+  text-align: center;
+}
+
+.site-list__item {
+  border-top: 1px solid $brd1;
+}
+
 .site-list__link {
-  font-family: $oswald;
-  @include font(14px, 21px, 700);
+  display: block;
+  @include font(20px, 20px, 700);
   color: $black;
   text-transform: uppercase;
+  padding: 25px 0;
 }
