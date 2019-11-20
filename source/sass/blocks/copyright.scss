@@ -1,5 +1,9 @@
-.copyright__text-link {
-  font-family: Arial;
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-family: $font-other;
+
   @include font(16px, 16px);
-  color: $f-color;
+  color: $font-other-color;
 }

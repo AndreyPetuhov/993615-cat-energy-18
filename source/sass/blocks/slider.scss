@@ -4,8 +4,8 @@
 }
 
 .slider__toggle {
-  font: inherit;
   @include font(16px, 20px);
+  font: inherit;
   text-transform: uppercase;
   background-color: transparent;
   border: none;

@@ -8,9 +8,10 @@
 }
 
 .advantages__item {
-  font-family: Arial;
+  font-family: $font-other;
+
   @include font(14px, 18px);
-  color: $f-color;
+  color: $font-other-color;
   padding-left: 80px;
   margin-bottom: 26px;
 }

@@ -12,20 +12,22 @@
 }
 
 .contacts__address {
-  font-family: Arial;
-  color: $f-color;
+  width: 50%;
+  font-family: $font-other;
+
   @include font(14px, 20px);
   font-style: normal;
-  width: 50%;
+  color: $font-other-color;
 }
 
 .contacts__map-wrapper {
   min-height: 362px;
+
   @include bg-img("bg-map-mobile@1x.png");
   background-position: 50% 0;
   text-align: center;
 }
 
 .contacts--grey {
-  background-color: $bg-grey;
+  background-color: $bg-other-color;
 }

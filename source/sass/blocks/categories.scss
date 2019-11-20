@@ -1,34 +1,35 @@
 .categories__item {
-  background-color: $bg-grey;
-  padding: 37px 21px 0px;
+  padding: 37px 21px 0;
   margin-bottom: 18px;
+  background-color: $bg-other-color;
 }
 
 .categories__title,
 .categories__link {
   text-transform: uppercase;
-  color: $black;
+  color: $font-main-color;
 }
 
 .categories__title {
-  @include font(24px, 27px);
   margin-top: 0;
   margin-bottom: 35px;
   padding-left: 71px;
+
+  @include font(24px, 27px);
 }
 
-
 .categories__description {
-  font-family: Arial;
-  @include font(14px, 18px);
-  color: $f-color;
-  margin-bottom: 0;
   margin-bottom: 23px;
+  font-family: $font-other;
+
+  @include font(14px, 18px);
+  color: $font-other-color;
 }
 
 .categories__link {
   display: block;
-  @include font(16px, 16px);
   padding: 21px 0;
-  border-top: 1px solid $brd2;
+
+  @include font(16px, 16px);
+  border-top: 1px solid $brd-categories-color;
 }

@@ -1,7 +1,6 @@
-@mixin font($font-size: 16px, $line-height: 20px, $font-weight: 400) {
+@mixin font($font-size: 16px, $line-height: 20px) {
   font-size: $font-size;
   line-height: $line-height;
-  font-weight: $font-weight;
 }
 
 @mixin bg-img($img, $repeat: no-repeat) {

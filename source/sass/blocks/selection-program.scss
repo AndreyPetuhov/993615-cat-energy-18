@@ -1,27 +1,37 @@
 .selection-program {
-  color: $white;
-  font-weight: 400;
-  @include bg-img("index-background-mobile.jpg");
-  background-position: 50% 0;
-  text-align: center;
+  position: relative;
   padding-top: 28px;
   margin-bottom: 22px;
+  text-align: center;
+
+  @include bg-img("index-background-mobile.jpg");
+  color: $white;
+  background-position: 50% 0;
 }
 
 .selection-program__title {
-  @include font (36px, 36px);
   margin-top: 0;
   margin-bottom: 28px;
+
+  @include font(36px, 36px);
+  font-weight: 400;
 }
 
 .selection-program__slogan {
   display: block;
-  @include font (14px, 14px);
-  text-transform: uppercase;
   margin-bottom: 302px;
+
+  @include font(14px, 14px);
+  text-transform: uppercase;
 }
 
 .selection-program__button {
   width: 280px;
-  @include font (14px, 18px)
+
+  @include font(14px, 18px);
+}
+.selection-program__image {
+  position: absolute;
+  top: 150px;
+  left: 25px;
 }

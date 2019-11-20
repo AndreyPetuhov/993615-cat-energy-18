@@ -3,17 +3,18 @@
 }
 
 .promo__wrapper {
+  min-height: 328px;
+  padding-top: 214px;
   text-align: center;
+
   @include bg-img("gift-photo-mobile@1x.jpg");
   background-position: 0 40px;
-  min-height: 328px;
-  border-top: 1px solid $brd;
-  padding-top: 214px;
-  ;
+  border-top: 1px solid $brd-categories-color;
 }
 
 .promo__text {
-  font-family: Arial;
+  font-family: $font-other;
+
   @include font(16px, 20px);
   color: $white;
 }
