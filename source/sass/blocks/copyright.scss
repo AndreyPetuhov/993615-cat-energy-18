@@ -1,0 +1,9 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-family: $font-other;
+
+  @include font(16px, 16px);
+  color: $font-other-color;
+}

@@ -1,0 +1,12 @@
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__toggle {
+  @include font(16px, 20px);
+  font: inherit;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}

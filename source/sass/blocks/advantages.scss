@@ -1,0 +1,17 @@
+.advantages {
+  margin-bottom: 47px;
+}
+
+.advantages__title {
+  @include font(36px, 60px);
+  margin-top: 0;
+}
+
+.advantages__item {
+  font-family: $font-other;
+
+  @include font(14px, 18px);
+  color: $font-other-color;
+  padding-left: 80px;
+  margin-bottom: 26px;
+}

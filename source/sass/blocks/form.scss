@@ -1,0 +1,86 @@
+.form {
+  padding-top: 10px;
+  margin-bottom: 34px;
+}
+
+.form__title {
+  margin-top: 0;
+
+  @include font(36px, 60px);
+}
+
+.form__description {
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @include font(14px, 18px);
+  text-transform: uppercase;
+}
+
+.form__label {
+  padding-right: 10px;
+
+  @include font(16px, 30px);
+  text-transform: uppercase;
+}
+
+.form__group {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+}
+
+.form__legend {
+  margin-bottom: 30px;
+
+  @include font(24px, 28px);
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form__note {
+  padding-left: 60px;
+  font-family: $font-other;
+
+  @include font(14px, 16px);
+  color: $font-other-color;
+}
+
+.form-field {
+  height: 45px;
+  margin-bottom: 14px;
+  padding-left: 16px;
+  border: 1px solid $brd-field-color;
+  flex-grow: 1;
+}
+
+.form-field::-webkit-input-placeholder,
+.form__input-textarea {
+  font-family: $font-main;
+
+  @include font(16px, 18px);
+  text-transform: uppercase;
+  color: $font-other-color;
+}
+
+.form__item-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form__input-textarea {
+  height: 150px;
+  width: 280px;
+  border: 1px solid $brd-field-color;
+  padding: 16px;
+  resize: none;
+}
+
+.form__input-radio {
+  margin-bottom: 20px;
+}

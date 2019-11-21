@@ -1,0 +1,56 @@
+.example {
+  padding-top: 15px;
+  padding-bottom: 36px;
+  background-color: $bg-other-color;
+}
+
+.example__title {
+  @include font(36px, 60px);
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: $font-main-color;
+}
+
+.example__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__indicator {
+  width: 128px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.example__value {
+  padding: 12px 22px 17px;
+  margin: 0;
+
+  @include font(24px, 24px);
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+}
+
+.example__name {
+  font-family: $font-other;
+
+  @include font(12px, 12px);
+  color: $font-other-color;
+}
+
+.exemple__total {
+  padding-left: 47px;
+
+  @include font(14px, 20px);
+  text-transform: uppercase;
+}
+
+.example__description {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: $font-other;
+
+  @include font(14px, 18px);
+  color: $font-other-color;
+}

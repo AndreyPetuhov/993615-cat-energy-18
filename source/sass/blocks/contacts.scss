@@ -1,0 +1,33 @@
+.contacts__wrapper {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 26px;
+}
+
+.contacts__title {
+  width: 50%;
+
+  @include font(16px, 20px);
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  width: 50%;
+  font-family: $font-other;
+
+  @include font(14px, 20px);
+  font-style: normal;
+  color: $font-other-color;
+}
+
+.contacts__map-wrapper {
+  min-height: 362px;
+
+  @include bg-img("bg-map-mobile@1x.png");
+  background-position: 50% 0;
+  text-align: center;
+}
+
+.contacts--grey {
+  background-color: $bg-other-color;
+}

@@ -1,0 +1,23 @@
+.site-list {
+  text-align: center;
+}
+
+.site-list__item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 320px;
+  height: 1px;
+  background-color: $brd-menu-color;
+  transform: translate(-20px);
+}
+
+.site-list__link {
+  display: block;
+  padding: 25px 0;
+
+  @include font(20px, 20px);
+  font-weight: 700;
+  color: $font-main-color;
+  text-transform: uppercase;
+}
