@@ -8,7 +8,17 @@
   display: block;
   width: 320px;
   height: 1px;
-  background-color: $brd-menu-color;
+  background-color: $border-menu-color;
+  transform: translate(-20px);
+}
+
+.site-list__item:last-child::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 320px;
+  height: 1px;
+  background-color: $border-menu-color;
   transform: translate(-20px);
 }
 

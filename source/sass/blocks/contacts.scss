@@ -8,6 +8,7 @@
   width: 50%;
 
   @include font(16px, 20px);
+  font-weight: 400;
   text-transform: uppercase;
 }
 

@@ -7,6 +7,7 @@
   margin-top: 0;
 
   @include font(36px, 60px);
+  font-weight: 400;
 }
 
 .form__description {
@@ -25,10 +26,30 @@
 }
 
 .form__group {
+  position: relative;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
+}
+
+.form__group.form__group:nth-of-type(2)::after,
+.form__group.form__group:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 320px;
+  height: 1px;
+  background-color: $border-menu-color;
+  transform: translate(-20px);
+}
+
+.form__group.form__group:nth-of-type(2)::before {
+  top: -21px;
+}
+
+.form__group.form__group:nth-of-type(2)::after {
+  bottom: -11px;
 }
 
 .form__legend {
@@ -54,7 +75,7 @@
   height: 45px;
   margin-bottom: 14px;
   padding-left: 16px;
-  border: 1px solid $brd-field-color;
+  border: 1px solid $border-field-color;
   flex-grow: 1;
 }
 
@@ -76,7 +97,7 @@
 .form__input-textarea {
   height: 150px;
   width: 280px;
-  border: 1px solid $brd-field-color;
+  border: 1px solid $border-field-color;
   padding: 16px;
   resize: none;
 }

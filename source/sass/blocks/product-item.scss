@@ -10,7 +10,7 @@
   display: block;
   width: 320px;
   height: 1px;
-  background-color: $brd-catalog-color;
+  background-color: $border-catalog-color;
   transform: translate(-20px);
 }
 
@@ -22,8 +22,11 @@
 
 .product-item__product-name {
   width: 80px;
+  margin-top: 22px;
+  margin-bottom: 12px;
 
   @include font(16px, 20px);
+  font-weight: 400;
   text-transform: uppercase;
 }
 

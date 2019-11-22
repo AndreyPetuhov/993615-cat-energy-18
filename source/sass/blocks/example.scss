@@ -5,26 +5,31 @@
 }
 
 .example__title {
-  @include font(36px, 60px);
   margin-top: 0;
   margin-bottom: 24px;
-  color: $font-main-color;
+
+  @include font(36px, 60px);
+  font-weight: 400;
 }
 
 .example__wrapper {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 17px;
 }
 
 .example__indicator {
-  width: 128px;
+  position: relative;
   margin-top: 0;
   text-align: center;
 }
 
 .example__value {
-  padding: 12px 22px 17px;
+  display: block;
+  width: 124px;
+  height: 56px;
   margin: 0;
+  padding-top: 12px;
 
   @include font(24px, 24px);
   text-transform: uppercase;
@@ -33,17 +38,25 @@
 }
 
 .example__name {
+  position: absolute;
+  left: 23px;
+  bottom: -15px;
+  padding: 0 10px;
   font-family: $font-other;
 
   @include font(12px, 12px);
   color: $font-other-color;
+  background-color: $bg-other-color;
 }
 
 .exemple__total {
+  display: block;
   padding-left: 47px;
+  margin-bottom: 35px;
 
   @include font(14px, 20px);
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .example__description {

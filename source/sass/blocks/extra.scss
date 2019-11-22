@@ -1,16 +1,17 @@
 .extra {
-  padding-top: 34px;
+  padding-top: 28px;
 }
 
 .extra__title {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   @include font(24px, 24px);
+  font-weight: 400;
 }
 
 .extra__item {
   padding-top: 15px;
   margin-bottom: 16px;
-  border-top: 1px solid $brd-catalog-color;
+  border-top: 1px solid $border-catalog-color;
 }

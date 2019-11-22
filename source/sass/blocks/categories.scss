@@ -4,32 +4,82 @@
   background-color: $bg-other-color;
 }
 
-.categories__title,
 .categories__link {
+  display: block;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 21px;
+
+  @include font(16px, 16px);
   text-transform: uppercase;
   color: $font-main-color;
+  border-top: 1px solid $border-categories-color;
+}
+
+.categories__link::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 11px;
+  top: 23px;
+  left: 98px;
+
+  @include bg-img("icon-right-arrow-long.svg");
+  background-position: 50% 50%;
 }
 
 .categories__title {
+  position: relative;
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   padding-left: 71px;
 
   @include font(24px, 27px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.categories__title::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  left: 2px;
+  top: -12px;
+  border-radius: 50%;
+  background-color: $button-color;
+}
+
+.categories__title::after {
+  position: absolute;
+  content: "";
+
+  background-position: 50% 50%;
+  z-index: 1;
+}
+
+.categories__title--weight-down::after {
+  width: 35px;
+  height: 49px;
+  top: -15px;
+  left: 10px;
+
+  @include bg-img("icon-cat-slim.svg");
+}
+
+.categories__title--weight-up::after {
+  width: 67px;
+  height: 28px;
+  top: 0;
+  left: -7px;
+
+  @include bg-img("icon-cat-pro.svg");
 }
 
 .categories__description {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   font-family: $font-other;
 
   @include font(14px, 18px);
   color: $font-other-color;
-}
-
-.categories__link {
-  display: block;
-  padding: 21px 0;
-
-  @include font(16px, 16px);
-  border-top: 1px solid $brd-categories-color;
 }
