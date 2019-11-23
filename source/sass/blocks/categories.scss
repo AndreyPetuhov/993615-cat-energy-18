@@ -83,3 +83,17 @@
   @include font(14px, 18px);
   color: $font-other-color;
 }
+
+@media (min-width: $tablet-width) {
+  .categories__title {
+    padding-left: 0;
+
+    @include font(36px, 37px);
+  }
+
+  .categories__description {
+    width: 376px;
+
+    @include font(16px, 24px);
+  }
+}

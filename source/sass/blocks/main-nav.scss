@@ -30,3 +30,9 @@
 
   @include bg-img("icon-close.svg");
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav__button {
+    display: none;
+  }
+}

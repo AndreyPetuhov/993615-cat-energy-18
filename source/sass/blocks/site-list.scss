@@ -31,3 +31,25 @@
   color: $font-main-color;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+    justify-content: space-between;
+  }
+
+  .site-list__link {
+    padding: 25px 0;
+
+    @include font(18px, 25px);
+    font-weight: 400;
+    color: $font-main-color;
+  }
+
+  .site-list__item::before,
+  .site-list__item:last-child::after {
+    display: none;
+  }
+}

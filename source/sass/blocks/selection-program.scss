@@ -36,3 +36,39 @@
   top: 150px;
   left: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .selection-program {
+    padding-left: 90px;
+    text-align: left;
+    background-image: none;
+    color: $font-main-color;
+  }
+
+  .selection-program__title {
+    width: 420px;
+
+    @include font(60px, 60px);
+    font-weight: 400;
+  }
+
+  .selection-program__slogan {
+    margin-bottom: 40px;
+
+    @include font(20px, 20px);
+    text-transform: uppercase;
+  }
+
+  .selection-program__image {
+    top: 250px;
+    left: 70px;
+    z-index: -1;
+  }
+
+  .selection-program__button {
+    width: 280px;
+    margin-bottom: 530px;
+
+    @include font(20px, 20px);
+  }
+}

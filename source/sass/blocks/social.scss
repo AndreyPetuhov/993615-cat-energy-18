@@ -12,3 +12,9 @@
   border-top: 1px solid $border-social-color;
   border-bottom: 1px solid $border-social-color;
 }
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    border: none;
+  }
+}

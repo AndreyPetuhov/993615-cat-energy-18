@@ -64,3 +64,25 @@
 
   @include bg-img("advantage-clock@1x.png");
 }
+
+@media (min-width: $tablet-width) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    position: relative;
+    width: 324px;
+    margin-right: 60px;
+    padding-left: 0;
+    padding-right: 80px;
+    padding-top: 117px;
+
+    @include font(16px, 24px);
+  }
+
+  .advantages__item:nth-child(2n) {
+    margin-right: 0;
+  }
+}

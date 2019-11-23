@@ -67,3 +67,27 @@
   @include font(14px, 18px);
   color: $font-other-color;
 }
+
+@media (min-width: $tablet-width) {
+  .example {
+    height: 1084px;
+    background-image: linear-gradient($white 620px, $bg-other-color 620px);
+  }
+
+  .example__title {
+    @include font(60px, 60px);
+  }
+
+  .example__description {
+    @include font(16px, 24px);
+  }
+
+  .example .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example__slider {
+    margin-top: 250px;
+  }
+}
