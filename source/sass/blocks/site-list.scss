@@ -53,3 +53,9 @@
     display: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .site-list__link--white {
+    color: $white;
+  }
+}

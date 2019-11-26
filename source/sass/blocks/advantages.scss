@@ -69,20 +69,24 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .advantages__item {
     position: relative;
     width: 324px;
-    margin-right: 60px;
+
     padding-left: 0;
     padding-right: 80px;
     padding-top: 117px;
 
     @include font(16px, 24px);
   }
+}
 
-  .advantages__item:nth-child(2n) {
-    margin-right: 0;
+@media (min-width: $desktop-width) {
+  .advantages__item {
+    width: 245px;
+    padding-right: 0;
   }
 }

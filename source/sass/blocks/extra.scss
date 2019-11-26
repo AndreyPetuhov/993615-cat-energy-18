@@ -11,7 +11,12 @@
 }
 
 .extra__item {
-  padding-top: 15px;
   margin-bottom: 16px;
-  border-top: 1px solid $border-catalog-color;
+}
+
+@media (min-width: $tablet-width) {
+  .extra__item {
+    margin-bottom: 0;
+    margin-top: -1px;
+  }
 }

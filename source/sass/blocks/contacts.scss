@@ -43,3 +43,26 @@
     width: 200px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .contacts .container {
+    position: relative;
+  }
+
+  .contacts__wrapper {
+    position: absolute;
+    width: 570px;
+    padding-left: 77px;
+    padding-right: 90px;
+    padding-top: 67px;
+    padding-bottom: 64px;
+    background-color: $white;
+    top: 100px;
+    left: 40px;
+  }
+
+  .contacts__title,
+  .contacts__address {
+    width: 155px;
+  }
+}

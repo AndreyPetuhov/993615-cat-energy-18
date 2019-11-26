@@ -1,5 +1,4 @@
 .selection-program {
-  position: relative;
   padding-top: 28px;
   margin-bottom: 22px;
   text-align: center;
@@ -7,6 +6,10 @@
   @include bg-img("index-background-mobile.jpg");
   color: $white;
   background-position: 50% 0;
+}
+
+.selection-program .container {
+  position: relative;
 }
 
 .selection-program__title {
@@ -39,10 +42,13 @@
 
 @media (min-width: $tablet-width) {
   .selection-program {
-    padding-left: 90px;
     text-align: left;
     background-image: none;
     color: $font-main-color;
+  }
+
+  .selection-program .container {
+    padding-left: 90px;
   }
 
   .selection-program__title {
@@ -70,5 +76,29 @@
     margin-bottom: 530px;
 
     @include font(20px, 20px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection-program {
+    text-align: left;
+    color: $font-main-color;
+  }
+
+  .selection-program__image {
+    top: 50px;
+    left: 460px;
+  }
+
+  .selection-program .container::after {
+    position: absolute;
+    content: "";
+    width: 720px;
+    height: 696px;
+    top: -110px;
+    right: 0;
+    z-index: -2;
+
+    @include bg-img("index-background-desktop@1x.jpg");
   }
 }
