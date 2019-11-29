@@ -11,6 +11,8 @@
 }
 
 .form__description {
+  display: block;
+  width: 240px;
   margin-top: 0;
   margin-bottom: 40px;
 
@@ -116,6 +118,7 @@
   }
 
   .form__description {
+    width: 370px;
     margin-bottom: 70px;
     padding-left: 40px;
 
