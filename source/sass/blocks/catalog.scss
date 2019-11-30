@@ -1,10 +1,22 @@
 .catalog__title {
-  display: block;
-  margin-top: 16px;
+  position: relative;
+  padding-top: 16px;
+  margin-top: 0;
   margin-bottom: 28px;
 
   @include font(36px, 60px);
   font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 1px;
+    top: 0;
+    background-color: $border-catalog-color;
+    transform: translate(-20px);
+  }
 }
 
 .catalog__item {
@@ -12,6 +24,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__title::before {
+    display: none;
+  }
+
   .catalog__list {
     display: flex;
     flex-wrap: wrap;

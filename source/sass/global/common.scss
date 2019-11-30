@@ -24,7 +24,7 @@ input[type="radio"].visually-hidden {
   vertical-align: middle;
   text-transform: uppercase;
   padding-top: 11px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   text-align: center;
   font: inherit;
   font-size: 16px;
@@ -32,12 +32,29 @@ input[type="radio"].visually-hidden {
   color: $white;
   background-color: $button-color;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
 }
 
 @media (min-width: $tablet-width) {

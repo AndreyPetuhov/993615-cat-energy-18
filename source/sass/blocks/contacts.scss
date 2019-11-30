@@ -1,6 +1,6 @@
 .contacts__wrapper {
   display: flex;
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 26px;
   justify-content: space-between;
 }
@@ -26,7 +26,7 @@
   min-height: 362px;
 
   @include bg-img("bg-map-mobile@1x.png");
-  background-position: 50% 0;
+  background-position: 50% 50%;
   text-align: center;
 }
 

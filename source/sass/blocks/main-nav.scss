@@ -1,34 +1,61 @@
-.main-nav__button {
-  position: absolute;
-  top: 21px;
-  right: 20px;
-  width: 24px;
-  height: 18px;
-  font-size: 0;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
+.main-nav__wrapper {
+  display: block;
 }
 
-.main-nav__button::before {
-  display: none;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
+@media (max-width: $mobile-width-only) {
+  .main-nav__button {
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 
-  @include bg-img("icon-mobile-menu.svg");
-}
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
 
-.main-nav__button::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+    &:active {
+      opacity: 0.3;
+    }
+  }
 
-  @include bg-img("icon-close.svg");
+  .main-nav--closed .main-nav__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @include bg-img("icon-mobile-menu.svg");
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @include bg-img("icon-close.svg");
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--nojs {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

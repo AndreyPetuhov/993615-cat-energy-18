@@ -30,22 +30,36 @@
   font-weight: 700;
   color: $font-main-color;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .site-list {
     display: flex;
     flex-wrap: wrap;
-    width: 440px;
-    justify-content: space-between;
+    justify-content: flex-end;
+    width: 490px;
   }
 
   .site-list__link {
     padding: 25px 0;
+    margin: 0 18px;
 
     @include font(18px, 25px);
     font-weight: 400;
     color: $font-main-color;
+  }
+
+  .site-list__item:last-child .site-list__link {
+    margin-right: 0;
   }
 
   .site-list__item::before,
@@ -55,6 +69,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .site-list {
+    width: 610px;
+  }
+
   .site-list__link--white {
     color: $white;
   }

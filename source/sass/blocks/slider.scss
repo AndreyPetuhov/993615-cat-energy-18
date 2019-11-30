@@ -13,6 +13,15 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .slider__controls {
@@ -29,17 +38,8 @@
 }
 
 .slider__scale {
-  display: block;
   width: 36px;
   height: 6px;
   background-color: $button-color;
   border-radius: 3px;
-}
-
-.slider__scale--right {
-  display: none;
-}
-
-.slider__image--after {
-  display: none;
 }

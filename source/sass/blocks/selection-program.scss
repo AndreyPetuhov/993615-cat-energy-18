@@ -14,7 +14,7 @@
 
 .selection-program__title {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   @include font(36px, 36px);
   font-weight: 400;
@@ -25,6 +25,7 @@
   margin-bottom: 302px;
 
   @include font(14px, 14px);
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -36,8 +37,8 @@
 
 .selection-program__image {
   position: absolute;
-  top: 150px;
-  left: 25px;
+  top: 139px;
+  left: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -91,8 +92,8 @@
   }
 
   .selection-program .container::after {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 720px;
     height: 696px;
     top: -110px;

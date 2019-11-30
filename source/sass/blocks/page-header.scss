@@ -4,14 +4,23 @@
 
 .page-header__logo {
   display: block;
+  margin-right: 30px;
   padding-top: 11px;
   padding-bottom: 13px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-header .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 

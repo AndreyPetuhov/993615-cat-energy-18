@@ -1,9 +1,21 @@
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 10px;
   font-family: $font-other;
 
   @include font(16px, 16px);
-  color: $font-other-color;
+  color: $social-link-color;
+  fill: $social-link-color;
+
+  &:hover,
+  &:focus {
+    fill: $button-color;
+  }
+
+  &:active {
+    fill: $button-color;
+    opacity: 0.3;
+  }
 }
