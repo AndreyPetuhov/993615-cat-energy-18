@@ -1,3 +1,10 @@
+.next-items {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 .next-items::before,
 .next-items::after {
   content: "";
@@ -5,20 +12,14 @@
   display: block;
   width: 320px;
   height: 1px;
+  left: -20px;
   background-color: $border-menu-color;
-  transform: translate(-20px);
 }
 
 .next-items::after {
   bottom: -24px;
 }
 
-.next-items {
-  position: relative;
-  display: block;
-  margin-bottom: 25px;
-  text-align: center;
-}
 
 .next-items__title {
   padding-top: 82px;
@@ -45,6 +46,7 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .next-items::before,
   .next-items::after {
     display: none;

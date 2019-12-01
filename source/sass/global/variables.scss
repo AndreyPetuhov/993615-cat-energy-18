@@ -11,12 +11,19 @@ $border-menu-color: #e6e6e6;
 $border-categories-color: #d9d9d9;
 $border-social-color: #d9d9d9;
 $border-field-color: #e6e6e6;
+$border-field-color-hover: #cdcdcd;
+$border-field-color-active: #444444;
 $border-slider__controls: #cdcdcd;
 $social-link-color: #666666;
-
+$radio-field-color:#cdcdcd;
+$radio-field-hover-color:#bcbcbc;
+$error-color:#ff8282;
 /*шрифты*/
-$font-main: "Oswald", "Arial", sans-serif;
-$font-other: "Arial", sans-serif;
+$font-main: "Oswald",
+"Arial",
+sans-serif;
+$font-other: "Arial",
+sans-serif;
 
 /*брейкпонты*/
 $mobile-width-only: 767px;

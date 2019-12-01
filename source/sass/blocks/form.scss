@@ -1,13 +1,26 @@
 .form {
-  padding-top: 10px;
   margin-bottom: 34px;
 }
 
 .form__title {
+  position: relative;
   margin-top: 0;
+  margin-bottom: 26px;
+  padding-top: 16px;
 
   @include font(36px, 60px);
   font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 1px;
+    top: 0;
+    left: -20px;
+    background-color: $border-catalog-color;
+  }
 }
 
 .form__description {
@@ -20,13 +33,6 @@
   text-transform: uppercase;
 }
 
-.form__label {
-  padding-right: 10px;
-
-  @include font(16px, 30px);
-  text-transform: uppercase;
-}
-
 .form__group {
   position: relative;
   margin: 0;
@@ -35,34 +41,16 @@
   border: none;
 }
 
-.form__group--selection-program::after,
-.form__group--selection-program::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 320px;
-  height: 1px;
-  background-color: $border-menu-color;
-  transform: translate(-20px);
-}
-
-.form__group--selection-program::before {
-  top: -21px;
-}
-
-.form__group--selection-program::after {
-  bottom: -11px;
-}
-
 .form__legend {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
-  @include font(24px, 28px);
+  @include font(24px, 24px);
 }
+
 
 .form__button {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .form__note {
@@ -73,16 +61,58 @@
   color: $font-other-color;
 }
 
-.form-field {
+.form__input[type="text"],
+.form__input[type="number"],
+.form__input[type="email"],
+.form__input[type="tel"] {
   height: 45px;
   margin-bottom: 14px;
   padding-left: 16px;
   border: 1px solid $border-field-color;
   flex-grow: 1;
+
+  &:hover {
+    border: 1px solid $border-field-color-hover;
+  }
+
+  &:focus {
+    border: 2px solid $border-field-color-active;
+  }
 }
 
-.form-field::-webkit-input-placeholder,
-.form__input-textarea {
+
+.form__label {
+  position: relative;
+  display: block;
+  margin-right: 10px;
+
+  @include font(16px, 30px);
+  text-transform: uppercase;
+}
+
+
+.form__group--selection-program::after,
+.form__group--selection-program::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 320px;
+  height: 1px;
+  left: -20px;
+  background-color: $border-menu-color;
+}
+
+.form__group--selection-program::before {
+  top: -21px;
+}
+
+.form__group--selection-program::after {
+  bottom: -8px;
+}
+
+
+.form__input::-webkit-input-placeholder,
+.form-textarea-field {
   font-family: $font-main;
 
   @include font(16px, 18px);
@@ -97,17 +127,136 @@
   align-items: baseline;
 }
 
-.form-textarea {
+
+.form__input[type="radio"],
+.form__input[type="checkbox"] {
+  display: none;
+}
+
+/*фоpма -- выбор диеты */
+
+.form__group--selection-program {
+  margin-bottom: 35px;
+}
+
+.form__input[type="radio"]+.form__label {
+  padding-left: 46px;
+  margin-bottom: 13px;
+  cursor: pointer;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border: 1px solid $radio-field-color;
+    border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border: 1px solid $radio-field-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__input[type="radio"]:checked+.form__label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 9px;
+  left: 9px;
+  background-color: $button-color;
+  border-radius: 50%;
+}
+
+/*фоpма -- контактные данные */
+
+.form__group--contacts {
+  margin-bottom: 13px;
+}
+
+.form__group--contacts .form__item {
+  position: relative;
+}
+
+.email-logo {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+}
+
+.phone-logo {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+.form__input[type="email"]:focus+svg,
+.form__input[type="tel"]:focus+svg {
+  fill: $button-color;
+}
+
+/* форма -- блок с комментарием*/
+.form__group--comment {
+  margin-bottom: 26px;
+}
+
+.form-textarea-field {
   height: 150px;
   width: 280px;
+  padding: 13px;
+  padding-left: 15px;
+  padding-right: 5px;
   border: 1px solid $border-field-color;
-  padding: 16px;
-  padding-left: 10px;
   resize: none;
 }
 
-.form-radio {
+/* форма -- блок дополнительных товаров*/
+.form__group--extra-product {
   margin-bottom: 20px;
+}
+
+.form__input[type="checkbox"]+.form__label {
+  padding-left: 46px;
+  margin-bottom: 13px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 1px;
+    left: 0;
+    border: 1px solid $radio-field-color;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border: 1px solid $radio-field-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form__input[type="checkbox"]:checked+.form__label::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 16px;
+  top: 8px;
+  left: 5px;
+  background-image: url("../img/icon-tick.svg");
 }
 
 @media (min-width: $tablet-width) {
@@ -137,14 +286,17 @@
     text-transform: uppercase;
   }
 
-  .form-field {
+  .form__input[type="text"],
+  .form__input[type="number"],
+  .form__input[type="email"],
+  .form__input[type="tel"] {
     height: 52px;
     margin-bottom: 20px;
     padding-left: 19px;
   }
 
-  .form-field::-webkit-input-placeholder,
-  .form-textarea {
+  .form__input::-webkit-input-placeholder,
+  .form-textarea-field {
     @include font(20px, 20px);
   }
 
@@ -164,7 +316,7 @@
     @include font(36px, 36px);
   }
 
-  .form-textarea {
+  .form-textarea-field {
     height: 174px;
     width: 100%;
     padding: 14px 18px;

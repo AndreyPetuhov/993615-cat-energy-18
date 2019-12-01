@@ -8,8 +8,8 @@
   display: block;
   width: 320px;
   height: 1px;
+  left: 0;
   background-color: $border-menu-color;
-  transform: translate(-20px);
 }
 
 .site-list__item:last-child::after {
@@ -18,8 +18,8 @@
   display: block;
   width: 320px;
   height: 1px;
+  left: -0;
   background-color: $border-menu-color;
-  transform: translate(-20px);
 }
 
 .site-list__link {
