@@ -2,19 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 13px;
   border-top: 1px solid $border-catalog-color;
 }
 
 .extra-product-item:last-child {
   padding-bottom: 18px;
   border-bottom: 1px solid $border-catalog-color;
-  margin-bottom: 40px;
 }
 
 .extra-product-item__title {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 
   @include font(16px, 16px);
   font-weight: 400;
@@ -23,7 +22,7 @@
 
 .extra-product-item__name,
 .extra-product-item__value {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: $font-other;
 
   @include font(14px, 14px);

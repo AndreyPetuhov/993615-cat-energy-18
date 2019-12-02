@@ -3,25 +3,26 @@
   display: block;
   margin-bottom: 25px;
   text-align: center;
-}
 
-.next-items::before,
-.next-items::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 320px;
-  height: 1px;
-  left: -20px;
-  background-color: $border-menu-color;
-}
+  &::before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 1px;
+    left: -20px;
+    background-color: $border-menu-color;
+  }
 
-.next-items::after {
-  bottom: -24px;
+  &::after {
+    bottom: -24px;
+  }
 }
 
 
 .next-items__title {
+  position: relative;
   padding-top: 82px;
   margin-top: 0;
   margin-bottom: 8px;
@@ -29,6 +30,17 @@
   @include font(16px, 20px);
   font-weight: 400;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 124px;
+    top: 29px;
+    width: 30px;
+    height: 30px;
+
+    @include bg-img("icon-plus-mobile.svg")
+  }
 }
 
 .next-items__text {
@@ -40,9 +52,22 @@
 }
 
 .next-items__button {
-  width: 100%;
+  display: block;
   background-color: $bg-other-color;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
   color: $font-other-color;
+
+  &:hover,
+  &focus {
+    background-color: $button-next-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 @media (min-width: $tablet-width) {
