@@ -4,8 +4,7 @@
   margin-bottom: 25px;
   text-align: center;
 
-  &::before,
-  &:after {
+  &::before {
     content: "";
     position: absolute;
     display: block;
@@ -15,11 +14,17 @@
     background-color: $border-menu-color;
   }
 
-  &::after {
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 1px;
     bottom: -24px;
+    left: -20px;
+    background-color: $border-menu-color;
   }
 }
-
 
 .next-items__title {
   position: relative;
@@ -39,7 +44,7 @@
     width: 30px;
     height: 30px;
 
-    @include bg-img("icon-plus-mobile.svg")
+    @include bg-img("icon-plus-mobile.svg");
   }
 }
 
@@ -67,11 +72,9 @@
   &:active {
     opacity: 0.3;
   }
-
 }
 
 @media (min-width: $tablet-width) {
-
   .next-items::before,
   .next-items::after {
     display: none;

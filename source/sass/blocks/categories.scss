@@ -5,8 +5,7 @@
 }
 
 .categories__link {
-  display: block;
-  position: relative;
+  display: flex;
   padding-top: 20px;
   padding-bottom: 21px;
 
@@ -17,22 +16,18 @@
 }
 
 .categories__link::after {
-  position: absolute;
-  content: "";
+  content: url("../img/icon-right-arrow-long.svg");
+  display: flex;
+  align-items: center;
   width: 24px;
   height: 11px;
-  top: 23px;
-  left: 98px;
-
-  @include bg-img("icon-right-arrow-long.svg");
-  background-position: 50% 50%;
+  margin-left: 12px;
 }
 
 .categories__link:hover::after,
 .categories__link:focus::after {
+  content: url("../img/icon-right-arrow-verylong.svg");
   width: 33px;
-
-  @include bg-img("icon-right-arrow-verylong.svg");
 }
 
 .categories__link:active {
@@ -97,14 +92,27 @@
 
 
 @media (min-width: $tablet-width) {
+  .categories__list {
+    margin-bottom: 47px;
+  }
+
+  .categories__item {
+    margin-bottom: 30px;
+    padding-left: 54px;
+    padding-top: 75px;
+    padding-bottom: 42px;
+  }
+
   .categories__title {
+    margin-bottom: 27px;
     padding-left: 0;
 
     @include font(36px, 37px);
   }
 
   .categories__description {
-    width: 376px;
+    width: 340px;
+    margin-bottom: 34px;
 
     @include font(16px, 24px);
   }
@@ -112,26 +120,31 @@
   .categories__title::before {
     width: 200px;
     height: 200px;
-    left: 400px;
-    top: 25px;
+    left: 392px;
+    top: 18px;
   }
 
   .categories__title--weight-down::after {
     width: 140px;
     height: 194px;
-    top: 20px;
-    left: 430px;
+    top: 5px;
+    left: 425px;
   }
 
   .categories__title--weight-up::after {
     width: 268px;
     height: 112px;
-    top: 50px;
-    left: 350px;
+    top: 60px;
+    left: 360px;
   }
 
   .categories__link {
+    @include font(20px, 20px);
     border: none;
+
+    &::after {
+      margin-left: 23px;
+    }
   }
 }
 

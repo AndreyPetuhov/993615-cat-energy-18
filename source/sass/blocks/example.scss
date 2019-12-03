@@ -15,17 +15,17 @@
 .example__wrapper2 {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 17px;
+  margin-bottom: 20px;
 }
 
 .example__indicator {
-  position: relative;
-  margin-top: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
 
 .example__value {
-  display: block;
   width: 124px;
   height: 56px;
   margin: 0;
@@ -33,20 +33,21 @@
 
   @include font(24px, 24px);
   text-transform: uppercase;
+  text-align: center;
   border: 1px solid #cdcdcd;
   border-radius: 2px;
 }
 
 .example__name {
-  position: absolute;
-  left: 23px;
-  bottom: -15px;
-  padding: 0 10px;
+  width: 88px;
+  margin-top: -10px;
+  padding: 0 14px;
   font-family: $font-other;
 
   @include font(12px, 12px);
   color: $font-other-color;
   background-color: $bg-other-color;
+  text-align: center;
 }
 
 .exemple__total {
@@ -70,8 +71,12 @@
 
 @media (min-width: $tablet-width) {
   .example {
+    margin-top: -30px;
+    padding-top: 43px;
     background-image: linear-gradient($white 620px, $bg-other-color 620px);
+    border-top: 1px solid $border-field-color;
   }
+
 
   .example__wrapper1 {
     display: flex;
@@ -81,23 +86,47 @@
 
   .example__title {
     @include font(60px, 60px);
+    margin-bottom: 65px;
   }
 
   .example__description {
     @include font(16px, 24px);
+    margin-bottom: 54px;
   }
 
   .example__wrapper2 {
     width: 366px;
   }
 
-  .example__slider {
-    margin-top: 250px;
-    text-align: center;
+  .example__value {
+    width: 162px;
+    height: 72px;
+    padding-top: 14px;
+
+    @include font(30px, 37px);
+  }
+
+  .example__name {
+    width: 145px;
+    margin-top: -10px;
+    padding: 0 5px;
+
+    @include font(14px, 14px);
+    background-color: $white;
   }
 
   .exemple__total {
-    width: 175px;
+    width: 176px;
+    padding: 0;
+    margin-top: 6px;
+    text-align: right;
+
+    @include font(20px, 30px);
+  }
+
+  .example__slider {
+    margin-top: 250px;
+    text-align: center;
   }
 }
 
