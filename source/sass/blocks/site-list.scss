@@ -6,21 +6,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 320px;
+  width: 100vw;
   height: 1px;
-  left: 0;
+  left: calc((100vw - 320px) / -2);
   background-color: $border-menu-color;
 }
-
-/* .site-list__item:last-child::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 320px;
-  height: 1px;
-  left: -0;
-  background-color: $border-menu-color;
-} */
 
 .site-list__item a[href] {
   &:hover,
@@ -48,7 +38,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    width: 490px;
+    width: 500px;
   }
 
   .site-list__item {
@@ -90,7 +80,15 @@
     width: 610px;
   }
 
+  .site-list__link {
+    @include font(20px, 28.9px);
+  }
+
   .site-list--white .site-list__link {
     color: $white;
+  }
+
+  .site-list--white .site-list__item::after {
+    background: $white;
   }
 }

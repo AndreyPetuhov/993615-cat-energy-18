@@ -1,13 +1,11 @@
 .extra-product-item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: baseline;
   padding-top: 13px;
+  padding-bottom: 16px;
   border-top: 1px solid $border-catalog-color;
-}
-
-.extra-product-item:last-child {
-  padding-bottom: 18px;
   border-bottom: 1px solid $border-catalog-color;
 }
 
@@ -18,6 +16,7 @@
   @include font(16px, 16px);
   font-weight: 400;
   text-transform: uppercase;
+  word-break: break-all;
 }
 
 .extra-product-item__name,
@@ -27,6 +26,16 @@
 
   @include font(14px, 14px);
   color: $font-other-color;
+  word-break: break-all;
+}
+
+.extra-product-item__name {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.extra-product-item__value {
+  margin-left: auto;
 }
 
 .extra-product-item__button {
@@ -34,57 +43,75 @@
 }
 
 .extra-product-item__link {
-  width: 100%;
   color: $font-main-color;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .extra-product-item {
     border: 1px solid $border-catalog-color;
-    padding: 28px 38px;
+    padding: 29px 36px 29px 38px;
+    padding-top: 25px;
+    padding-bottom: 28px;
   }
 
   .extra-product-item__value {
-    width: 95px;
+    width: 75px;
     text-align: right;
+
+    @include font(16px, 20px);
   }
 
   .extra-product-item__name {
-    width: 245px;
+    width: 212px;
+    margin-right: 20px;
     text-align: right;
+
+    @include font(16px, 20px);
   }
 
   .extra-product-item__link {
-    width: 286px;
-    margin-right: auto;
+    width: 285px;
+    margin-right: 40px;
+  }
+
+  .extra-product-item__title {
+    @include font(20px, 20px);
+  }
+
+  .extra-product-item__button {
+    margin-top: 5px;
+
+    @include font(16px, 20px);
   }
 }
 
 @media (min-width: $desktop-width) {
-  .extra-product-item__button {
-    width: 245px;
-  }
-
   .extra-product-item {
+    justify-content: flex-start;
     width: 895px;
     align-items: baseline;
-    padding: 14px 0;
+    padding-top: 11px;
+    padding-bottom: 7px;
+    padding-left: 0;
+    padding-right: 0;
     border: none;
     border-top: 1px solid $border-catalog-color;
     border-bottom: 1px solid $border-catalog-color;
   }
 
   .extra-product-item__value {
-    width: 80px;
-    text-align: right;
+    width: 60px;
+    text-align: left;
+    margin-right: 20px;
   }
 
-  .extra-product-item__value,
   .extra-product-item__name {
+    width: 225px;
     text-align: left;
   }
 
-  .extra-product-item:last-child {
-    margin-bottom: 0;
+  .extra-product-item__button {
+    width: 245px;
   }
 }

@@ -1,5 +1,5 @@
 .form {
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .form__title {
@@ -15,10 +15,10 @@
     content: "";
     position: absolute;
     display: block;
-    width: 320px;
+    width: 100vw;
     height: 1px;
     top: 0;
-    left: -20px;
+    left: calc((100vw - 320px) / (-2) - 20px);
     background-color: $border-catalog-color;
   }
 }
@@ -27,7 +27,7 @@
   display: block;
   width: 240px;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @include font(14px, 18px);
   text-transform: uppercase;
@@ -36,15 +36,27 @@
 .form__group {
   position: relative;
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
   border: none;
 }
 
 .form__legend {
+  display: inline-block;
+  padding-right: 24px;
   margin-bottom: 35px;
+  background-color: $white;
 
   @include font(24px, 24px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 3px;
+    top: 14px;
+    z-index: -1;
+    background-color: $button-color;
+  }
 }
 
 .form__button {
@@ -66,7 +78,7 @@
 .form__input[type="tel"] {
   height: 45px;
   margin-bottom: 14px;
-  padding-left: 16px;
+  padding-left: 15px;
   border: 1px solid $border-field-color;
   flex-grow: 1;
 
@@ -76,35 +88,21 @@
 
   &:focus {
     border: 2px solid $border-field-color-active;
+    outline: none;
   }
+}
+
+.form__input:invalid {
+  border: 1px solid $error-color;
 }
 
 .form__label {
   position: relative;
   display: block;
-  margin-right: 10px;
+  margin-right: 12px;
 
   @include font(16px, 30px);
   text-transform: uppercase;
-}
-
-.form__group--selection-program::after,
-.form__group--selection-program::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 320px;
-  height: 1px;
-  left: -20px;
-  background-color: $border-menu-color;
-}
-
-.form__group--selection-program::before {
-  top: -21px;
-}
-
-.form__group--selection-program::after {
-  bottom: -8px;
 }
 
 .form__input::-webkit-input-placeholder,
@@ -128,10 +126,22 @@
   display: none;
 }
 
+.form__group--about-cat {
+  margin-bottom: 9px;
+}
+
 /*фоpма -- выбор диеты */
 
 .form__group--selection-program {
-  margin-bottom: 35px;
+  position: relative;
+  margin-bottom: 27px;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding-top: 21px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid $border-field-color;
 }
 
 .form__input[type="radio"] + .form__label {
@@ -177,25 +187,39 @@
   margin-bottom: 13px;
 }
 
-.form__group--contacts .form__item {
+.form__group--contacts .form__legend {
+  width: 205px;
+}
+
+.input-wrapper {
   position: relative;
+  flex-grow: 1;
+}
+
+.input-wrapper > .form__input {
+  width: 100%;
 }
 
 .email-logo {
   position: absolute;
   top: 15px;
-  right: 17px;
+  right: 15px;
 }
 
 .phone-logo {
   position: absolute;
   top: 13px;
-  right: 15px;
+  right: 13px;
 }
 
 .form__input[type="email"]:focus + svg,
 .form__input[type="tel"]:focus + svg {
   fill: $button-color;
+}
+
+.form__input[type="email"]:invalid + svg,
+.form__input[type="tel"]:invalid + svg {
+  fill: $error-color;
 }
 
 /* форма -- блок с комментарием*/
@@ -214,6 +238,10 @@
 }
 
 /* форма -- блок дополнительных товаров*/
+.form__group--extra-product .form__legend {
+  margin-bottom: 33px;
+}
+
 .form__group--extra-product {
   margin-bottom: 20px;
 }
@@ -253,28 +281,53 @@
   background-image: url("../img/icon-tick.svg");
 }
 
+/*--------------------------------------------------------------------*/
+
 @media (min-width: $tablet-width) {
+  .form {
+    margin-bottom: 73px;
+  }
+
   .form__title {
     margin-bottom: 56px;
+    padding-top: 47px;
 
     @include font(60px, 60px);
+
+    &::before {
+      display: none;
+    }
   }
 
   .form__description {
     width: 370px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
     padding-left: 40px;
 
     @include font(20px, 30px);
   }
 
   .form__group {
-    margin-left: 40px;
+    margin-left: 42px;
     margin-right: 36px;
   }
 
+  .form__legend {
+    margin-bottom: 76px;
+    margin-left: -42px;
+    padding-left: 42px;
+    padding-right: 42px;
+
+    @include font(36px, 36px);
+
+    &::after {
+      top: 23px;
+      left: calc((100vw - 708px) / -2 - 45px);
+    }
+  }
+
   .form__label {
-    padding-right: 17px;
+    margin-right: 16px;
 
     @include font(20px, 20px);
     text-transform: uppercase;
@@ -292,28 +345,76 @@
   .form__input::-webkit-input-placeholder,
   .form-textarea-field {
     @include font(20px, 20px);
+
+    overflow: visible;
   }
 
-  .form__group--selection-program::after,
-  .form__group--selection-program::before {
-    display: none;
+  .form__group--about-cat {
+    margin-bottom: 50px;
   }
 
   .form__group--selection-program {
-    border: 1px solid $border-field-color;
-    padding: 34px 88px 0;
+    margin-bottom: 75px;
+    padding-top: 34px;
+    padding-left: 27px;
+    padding-bottom: 2px;
   }
 
-  .form__legend {
-    margin-bottom: 76px;
+  .form__input[type="radio"] + .form__label {
+    padding-left: 60px;
+    margin-bottom: 33px;
 
-    @include font(36px, 36px);
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -9px;
+      left: 0;
+    }
+  }
+
+  .form__group--contacts {
+    margin-bottom: 45px;
+  }
+
+  .form__group--contacts .form__legend {
+    width: 596px;
+  }
+
+  .form__input[type="radio"]:checked + .form__label::after {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+    left: 11px;
+  }
+
+  .email-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .phone-logo {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+  }
+
+  .form__group--comment {
+    margin-bottom: 61px;
   }
 
   .form-textarea-field {
     height: 174px;
     width: 100%;
     padding: 14px 18px;
+  }
+
+  .form__group--extra-product {
+    margin-bottom: 11px;
+  }
+
+  .form__group--extra-product .form__legend {
+    margin-bottom: 67px;
   }
 
   .form__group--extra-product .form__list {
@@ -324,41 +425,132 @@
 
   .form__group--extra-product .form__item {
     width: 245px;
+    margin-right: 41px;
+  }
+
+  .form__input[type="checkbox"] + .form__label {
+    padding-left: 59px;
+    margin-bottom: 53px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -9px;
+      left: 0;
+    }
+  }
+
+  .form__input[type="checkbox"]:checked + .form__label::after {
+    top: 4px;
+    left: 10px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
   }
 
   .form__button {
     width: 283px;
+    margin-left: 42px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+
+    @include font(20px, 20px);
+  }
+
+  .form__note {
+    @include font(16px, 16px);
   }
 }
 
 @media (min-width: $desktop-width) {
+  .form {
+    margin-bottom: 84px;
+  }
+
+  .form .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__title {
+    width: 100%;
+    padding-top: 63px;
+  }
+
   .form__description {
     padding-left: 0;
+    margin-right: 700px;
   }
 
   .form__group {
+    margin: 0;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .form__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .form__legend {
+    &::after {
+      top: 23px;
+      left: calc((100vw - 1220px) / -2);
+    }
   }
 
   .form__group--about-cat,
   .form__group--selection-program {
     width: 570px;
+    margin-bottom: 49px;
+  }
+
+  .form__group--contacts {
+    width: 100%;
+    margin-bottom: 46px;
+  }
+
+  .form__group--contacts .form__legend {
+    width: 598px;
   }
 
   .form__group--contacts .form__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .form__group--contacts .form__item {
     width: 570px;
+  }
+
+  .form__group--comment {
+    width: 100%;
+    margin-bottom: 65px;
+  }
+
+  .form-textarea-field {
+    width: 100%;
+  }
+
+  .form__group--extra-product {
+    width: 100%;
+    margin-bottom: 17px;
+  }
+
+  .form__group--extra-product .form__item {
+    margin-right: 80px;
+  }
+
+  .form__group--extra-product .form__item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .form__button {
+    width: 568px;
+    margin-left: 0;
+  }
+
+  .form__note {
+    padding-left: 84px;
   }
 }

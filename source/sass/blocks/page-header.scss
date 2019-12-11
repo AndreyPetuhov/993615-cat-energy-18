@@ -6,7 +6,7 @@
   display: block;
   margin-right: 30px;
   padding-top: 11px;
-  padding-bottom: 13px;
+  padding-bottom: 11px;
 
   &:hover,
   &:focus {
@@ -22,11 +22,43 @@
   .page-header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
   }
 
   .page-header__logo-image {
     display: block;
     width: 173px;
     height: 58px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header .container {
+    padding-top: 43px;
+  }
+
+  .page-header--index .container::after {
+    content: "";
+    position: absolute;
+    width: 720px;
+    height: 696px;
+    top: 0;
+    right: -70px;
+    z-index: -2;
+    background: $button-color;
+
+    @include bg-img("index-background-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      @include bg-img("index-background-desktop@2x.jpg");
+      background-size: 720px 690px;
+    }
+  }
+
+  .page-header__logo-image {
+    display: block;
+    width: 202px;
+    height: 59px;
   }
 }

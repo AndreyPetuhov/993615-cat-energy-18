@@ -1,8 +1,8 @@
 .copyright__link {
+  width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
   font-family: $font-other;
 
   @include font(16px, 16px);
@@ -17,5 +17,11 @@
   &:active {
     fill: $button-color;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    width: 162px;
   }
 }
