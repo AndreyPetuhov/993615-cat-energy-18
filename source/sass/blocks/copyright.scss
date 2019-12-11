@@ -1,9 +1,27 @@
 .copyright__link {
+  width: 280px;
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  align-items: center;
   font-family: $font-other;
 
   @include font(16px, 16px);
-  color: $font-other-color;
+  color: $social-link-color;
+  fill: $social-link-color;
+
+  &:hover,
+  &:focus {
+    fill: $button-color;
+  }
+
+  &:active {
+    fill: $button-color;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    width: 162px;
+  }
 }

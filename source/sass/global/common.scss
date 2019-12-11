@@ -14,7 +14,6 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  position: relative;
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
@@ -22,10 +21,10 @@ input[type="radio"].visually-hidden {
 
 .button {
   display: inline-block;
-  vertical-align: middle;
-  text-transform: uppercase;
   padding-top: 11px;
   padding-bottom: 10px;
+  vertical-align: middle;
+  text-transform: uppercase;
   text-align: center;
   font: inherit;
   font-size: 16px;
@@ -33,10 +32,49 @@ input[type="radio"].visually-hidden {
   color: $white;
   background-color: $button-color;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .extra-promo-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 86px;
+  }
 }

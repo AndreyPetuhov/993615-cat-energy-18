@@ -1,6 +1,14 @@
+.slider {
+  width: 320px;
+  margin-left: -20px;
+}
+
 .slider__toggles {
   display: flex;
   justify-content: space-between;
+  width: 210px;
+  margin: 0 auto;
+  margin-top: 26px;
 }
 
 .slider__toggle {
@@ -9,4 +17,108 @@
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 84px;
+  height: 14px;
+  padding: 3px 5px;
+  background-color: $white;
+  border: 1px solid $border-slider-controls;
+  border-radius: 6px;
+  align-self: center;
+}
+
+.slider__scale {
+  width: 36px;
+  height: 6px;
+  background-color: $button-color;
+  border-radius: 3px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 690px;
+    margin-left: 15px;
+  }
+
+  .slider__toggles {
+    width: 570px;
+    margin-top: 8px;
+  }
+
+  .slider__image--before {
+    width: 690px;
+    height: 517px;
+  }
+
+  .slider__image--after {
+    width: 690px;
+    height: 517px;
+  }
+
+  .slider__toggle {
+    padding: 6px 0;
+
+    @include font(20px, 20px);
+    border-bottom: 1px dotted $toggle-border;
+
+    &:hover,
+    &:hover {
+      border-bottom: 1px solid $toggle-border;
+      opacity: 1;
+    }
+
+    &:active {
+      border-bottom: none;
+      opacity: 1;
+    }
+  }
+
+  .slider__controls {
+    width: 428px;
+    height: 6px;
+    border: none;
+    background-color: $slider-controls-color;
+  }
+
+  .slider__scale {
+    width: 34px;
+    height: 34px;
+    border: 12px solid $white;
+    background-color: $button-color;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px $border-slider-controls,
+      0 2px 2px 1px $border-slider-controls;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px $border-slider-controls,
+        0 4px 4px 1px $border-slider-controls;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px $button-color, 0 4px 4px 1px $border-slider-controls;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__toggles {
+    margin-top: 28px;
+    margin-left: 79px;
+  }
 }

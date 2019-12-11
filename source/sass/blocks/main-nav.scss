@@ -1,36 +1,65 @@
-.main-nav {
-  margin-bottom: 30px;
+.main-nav__wrapper {
+  display: block;
 }
 
-.main-nav__button {
-  position: absolute;
-  top: 21px;
-  right: 20px;
-  width: 24px;
-  height: 18px;
-  font-size: 0;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
+@media (max-width: $mobile-width-only) {
+  .main-nav__button {
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav--closed .main-nav__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @include bg-img("icon-mobile-menu.svg");
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @include bg-img("icon-close.svg");
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--nojs {
+    display: none;
+  }
 }
 
-.main-nav__button::before {
-  display: none;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-
-  @include bg-img("icon-mobile-menu.svg");
-}
-
-.main-nav__button::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-
-  @include bg-img("icon-close.svg");
+@media (min-width: $tablet-width) {
+  .main-nav__button {
+    display: none;
+  }
 }

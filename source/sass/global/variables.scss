@@ -4,12 +4,29 @@ $bg-other-color: #f2f2f2;
 $bg-main-color: #ffffff;
 $white: #ffffff;
 $button-color: #68b738;
+$button-hover-color: #5eaa2f;
+$button-next-hover-color: #ebebeb;
+$toggle-border: #989898;
 $font-other-color: #444444;
-$brd-catalog-color: #cdcdcd;
-$brd-menu-color: #e6e6e6;
-$brd-categories-color: #d9d9d9;
-$brd-social-color: #d9d9d9;
-$brd-field-color: #e6e6e6;
+$border-catalog-color: #ededed;
+$border-menu-color: #e6e6e6;
+$border-categories-color: #d9d9d9;
+$border-social-color: #d9d9d9;
+$border-field-color: #e6e6e6;
+$border-field-color-hover: #cdcdcd;
+$border-field-color-active: #444444;
+$border-slider-controls: #cdcdcd;
+$social-link-color: #666666;
+$radio-field-color: #cdcdcd;
+$radio-field-hover-color: #bcbcbc;
+$error-color: #ff8282;
+$slider-controls-color: #dcdcdc;
 /*шрифты*/
 $font-main: "Oswald", "Arial", sans-serif;
 $font-other: "Arial", sans-serif;
+
+/*брейкпонты*/
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+$retina-dppx: 1.5dppx;
