@@ -18,7 +18,6 @@
   @include font(14px, 18px);
   color: $font-other-color;
 
-
   &::before {
     content: "";
     position: absolute;
@@ -31,30 +30,29 @@
   }
 }
 
-
 .advantages__item--eco::before {
-  @include bg-img("../img/advantage-leaf@1x.png");
+  @include bg-img("advantage-leaf@1x.png");
   background-position: 50% 50%;
   background-size: 50px 50px;
 
   @media (min-resolution: $retina-dppx) {
-    @include bg-img("../img/advantage-leaf@2x.png");
+    @include bg-img("advantage-leaf@2x.png");
     background-size: 50px 50px;
   }
 }
 
 .advantages__item--to-cook::before {
-  @include bg-img("../img/advantage-powder@1x.png");
+  @include bg-img("advantage-powder@1x.png");
   background-position: 50% 50%;
 
   @media (min-resolution: $retina-dppx) {
-    @include bg-img("../img/advantage-powder@2x.png");
+    @include bg-img("advantage-powder@2x.png");
     background-size: 50px 50px;
   }
 }
 
 .advantages__item--hearty::before {
-  @include bg-img("../img/advantage-dining@1x.png");
+  @include bg-img("advantage-dining@1x.png");
   background-position: 50% 50%;
 
   @media (min-resolution: $retina-dppx) {
@@ -64,15 +62,14 @@
 }
 
 .advantages__item--quickly::before {
-  @include bg-img("../img/advantage-clock@1x.png");
+  @include bg-img("advantage-clock@1x.png");
   background-position: 50% 50%;
 
   @media (min-resolution: $retina-dppx) {
-    @include bg-img("../img/advantage-clock@2x.png");
+    @include bg-img("advantage-clock@2x.png");
     background-size: 50px 50px;
   }
 }
-
 
 @media (min-width: $tablet-width) {
   .advantages {
