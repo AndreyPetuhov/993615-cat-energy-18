@@ -38,7 +38,7 @@
     display: none;
   }
 
-  .main-nav--opened .main-nav__button::before {
+  .main-nav__button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -49,11 +49,7 @@
     @include bg-img("icon-close.svg");
   }
 
-  .main-nav--opened .main-nav__wrapper {
-    display: block;
-  }
-
-  .main-nav--nojs {
+  .main-nav--nojs .main-nav__button {
     display: none;
   }
 }

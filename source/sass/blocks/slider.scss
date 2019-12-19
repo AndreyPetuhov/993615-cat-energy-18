@@ -49,6 +49,16 @@
   border-radius: 3px;
 }
 
+.slider--before .slider__image--after,
+.slider--after .slider__image--before {
+  display: none;
+}
+
+.slider--before .slider__scale--right,
+.slider--after .slider__scale--left {
+  opacity: 0;
+}
+
 @media (min-width: $tablet-width) {
   .slider {
     width: 690px;
