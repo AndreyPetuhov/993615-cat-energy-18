@@ -46,7 +46,7 @@
     top: 0;
     right: calc(-50vw + 720px - 70px);
     z-index: -2;
-    background: $button-hover-color;
+    background-color: $button-hover-color;
     background-position: right;
 
     @include bg-img("index-background-desktop@1x.jpg");

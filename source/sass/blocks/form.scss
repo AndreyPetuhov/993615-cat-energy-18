@@ -341,7 +341,7 @@
 
     &::after {
       top: 23px;
-      left: calc((100vw - 708px) / -2 - 30px);
+      left: calc((100vw - 708px) / -2);
     }
   }
 
@@ -519,7 +519,7 @@
   .form__legend {
     &::after {
       top: 23px;
-      left: calc((100vw - 1220px) / -2);
+      left: calc((100vw - 1220px) / -2 + 40px);
     }
   }
 
