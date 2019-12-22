@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: baseline;
   padding-top: 13px;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
   border-top: 1px solid $border-catalog-color;
   border-bottom: 1px solid $border-catalog-color;
 }
@@ -80,7 +80,7 @@
   }
 
   .extra-product-item__button {
-    margin-top: 5px;
+    margin-top: 6px;
 
     @include font(16px, 20px);
   }

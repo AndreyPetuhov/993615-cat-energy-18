@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 *,
@@ -20,6 +19,10 @@ body {
   font-weight: 400;
 
   counter-reset: section;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 img {
