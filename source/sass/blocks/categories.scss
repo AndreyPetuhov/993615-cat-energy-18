@@ -18,17 +18,13 @@
 
 .categories__link::after {
   content: url("../img/icon-right-arrow-long.svg");
-  display: flex;
-  align-items: center;
-  width: 24px;
-  height: 11px;
   margin-left: 12px;
+  margin-top: -2px;
 }
 
 .categories__link:hover::after,
 .categories__link:focus::after {
   content: url("../img/icon-right-arrow-verylong.svg");
-  width: 33px;
 }
 
 .categories__link:active {
@@ -145,6 +141,7 @@
 
     &::after {
       margin-left: 23px;
+      margin-top: -6px;
     }
   }
 }
