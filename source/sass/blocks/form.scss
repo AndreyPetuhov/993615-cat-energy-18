@@ -94,6 +94,7 @@
 
   &:focus {
     border: 2px solid $border-field-color-active;
+    box-shadow: none;
     outline: none;
   }
 }
@@ -231,7 +232,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .form__input[type="radio"]:disabled + .form__label,
 .form__input[type="checkbox"]:disabled + .form__label {
   opacity: 0.3;
-  cursor: auto;
+  cursor: no-drop;
 }
 
 /* форма -- блок дополнительных товаров*/
