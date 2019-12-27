@@ -198,13 +198,20 @@ input[type="number"]::-webkit-inner-spin-button {
     border: 1px solid $radio-field-color;
   }
 
-  &:hover::before,
-  &:focus::before {
+  &:hover::before {
     border: 1px solid $radio-field-hover-color;
   }
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+
+.form__input[type="radio"]:focus + .form__label,
+.form__input[type="checkbox"]:focus + .form__label {
+  &::before {
+    border: 1px solid $button-color;
   }
 }
 
