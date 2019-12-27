@@ -11,6 +11,9 @@
 }
 
 .social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   fill: $social-link-color;
 
   &:hover,
