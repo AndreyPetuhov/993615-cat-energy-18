@@ -3,6 +3,7 @@
   margin-bottom: 35px;
   padding-top: 187px;
   text-align: center;
+  background-color: $button-hover-color;
 
   @include bg-img("gift-photo-mobile@1x.jpg");
   background-position: 50% 50%;
@@ -68,6 +69,7 @@
     padding-left: 0;
     padding-top: 0;
     text-align: center;
+    background: linear-gradient(to top, $button-hover-color 289px, $white 289px);
 
     @include bg-img("gift-photo-desktop@1x.jpg");
     background-position: 50% bottom;

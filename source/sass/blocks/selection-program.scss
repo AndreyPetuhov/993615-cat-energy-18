@@ -6,6 +6,7 @@
 
 .selection-program .container {
   position: relative;
+  background: linear-gradient($button-hover-color 305px, $white 305px);
 
   @include bg-img("index-background-mobile.jpg");
 
