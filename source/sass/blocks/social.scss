@@ -1,4 +1,4 @@
-.social__list {
+.social {
   display: flex;
   flex-wrap: wrap;
   width: 280px;
@@ -28,7 +28,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .social__list {
+  .social {
     width: 324px;
     border: none;
   }

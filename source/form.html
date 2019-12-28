@@ -63,11 +63,11 @@
           <ul class="form__list list">
             <li class="form__item">
               <label class="form__label" for="name">Имя:*</label>
-              <input class="form__input" type="text" name="name" id="name" placeholder="Барсик" />
+              <input class="form__input" type="text" name="name" id="name" placeholder="Барсик" required />
             </li>
             <li class="form__item">
               <label class="form__label" for="weight">Вес (кг):*</label>
-              <input class="form__input" type="number" name="weight" id="weight" placeholder="7" />
+              <input class="form__input" type="number" name="weight" id="weight" placeholder="7" required />
             </li>
             <li class="form__item">
               <label class="form__label" for="age">Возраст (лет): </label>
@@ -102,7 +102,8 @@
             <li class="form__item">
               <label class="form__label" for="email">E-mail:*</label>
               <div class="input-wrapper">
-                <input class="form__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" />
+                <input class="form__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
+                  required />
                 <svg class="email-logo" width="17" height="13">
                   <use xlink:href="#sprite-icon-mail"></use>
                 </svg>
@@ -112,7 +113,7 @@
             <li class="form__item">
               <label class="form__label" for="tel">телефон:*</label>
               <div class="input-wrapper">
-                <input class="form__input" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" />
+                <input class="form__input" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" required />
                 <svg class="phone-logo" width="20" height="20">
                   <use xlink:href="#sprite-icon-phone"></use>
                 </svg>
