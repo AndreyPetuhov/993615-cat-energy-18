@@ -18,7 +18,7 @@ var del = require("del");
 var uglify = require("gulp-uglify");
 var htmlmin = require("gulp-htmlmin");
 
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src("source/js/script.js")
     .pipe(uglify())
@@ -26,7 +26,7 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("css", function() {
+gulp.task("css", function () {
   return gulp
     .src("source/sass/style.scss")
     .pipe(plumber())
@@ -41,7 +41,7 @@ gulp.task("css", function() {
   /* .pipe(server.stream()); */
 });
 
-gulp.task("sprite", function() {
+gulp.task("sprite", function () {
   return gulp
     .src("source/img/sprite-*.svg")
     .pipe(
@@ -53,7 +53,7 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("html", function() {
+gulp.task("html", function () {
   return gulp
     .src("source/*.html")
     .pipe(posthtml([include()]))
@@ -61,7 +61,7 @@ gulp.task("html", function() {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("images", function() {
+gulp.task("images", function () {
   return gulp
     .src("source/img/**/*.{png,jpg,svg}")
     .pipe(
@@ -74,14 +74,14 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("webp", function() {
+gulp.task("webp", function () {
   return gulp
     .src("source/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("copy", function() {
+gulp.task("copy", function () {
   return gulp
     .src(
       [
@@ -96,7 +96,7 @@ gulp.task("copy", function() {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("build");
 });
 
@@ -114,7 +114,7 @@ gulp.task(
   )
 );
 
-gulp.task("server", function() {
+gulp.task("server", function () {
   server.init({
     server: "build/",
     notify: false,
@@ -126,9 +126,10 @@ gulp.task("server", function() {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("scripts", "refresh"));
 });
 
-gulp.task("refresh", function(done) {
+gulp.task("refresh", function (done) {
   server.reload();
   done();
 });

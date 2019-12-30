@@ -109,7 +109,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.form__input:invalid {
+.form--invalid .form__input:invalid {
   border: 2px solid $error-color;
 }
 
@@ -292,12 +292,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .form__input[type="email"]:focus + .email-logo,
-.form__input[type="tel"]:focus + svg {
+.form__input[type="tel"]:focus + .phone-logo {
   fill: $button-color;
 }
 
-.form__input[type="email"]:invalid + .email-logo,
-.form__input[type="tel"]:invalid + .phone-logo {
+
+.form--invalid .form__input[type="email"]:invalid + .email-logo,
+.form--invalid .form__input[type="tel"]:invalid + .phone-logo {
   fill: $error-color;
 }
 
