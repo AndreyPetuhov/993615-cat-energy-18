@@ -2,11 +2,11 @@
   margin-bottom: 22px;
   text-align: center;
   color: $white;
+  background-image: linear-gradient($button-hover-color 305px, $white 305px);
 }
 
 .selection-program .container {
   position: relative;
-  background: linear-gradient($button-hover-color 305px, $white 305px);
 
   @include bg-img("index-background-mobile.jpg");
 
@@ -54,6 +54,7 @@
     padding-bottom: 505px;
     text-align: left;
     color: $font-main-color;
+    background-image: none;
   }
 
   .selection-program .container {

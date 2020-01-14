@@ -5,21 +5,34 @@ var mainNavButton = document.querySelector(".main-nav__button");
 mainNav.classList.remove("main-nav--nojs");
 mainNav.classList.add("main-nav--closed");
 
-mainNavButton.addEventListener("click", function() {
+mainNavButton.addEventListener("click", function () {
   mainNav.classList.toggle("main-nav--closed");
 });
 
 /*слайдер*/
 var slider = document.querySelector(".slider");
-var buttonBefore = document.querySelector(".slider__toggle--before");
-var buttonAfter = document.querySelector(".slider__toggle--after");
 
-buttonBefore.addEventListener("click", function() {
-  slider.classList.remove("slider--after");
-  slider.classList.add("slider--before");
-});
+if (slider) {
+  var buttonBefore = document.querySelector(".slider__toggle--before");
+  var buttonAfter = document.querySelector(".slider__toggle--after");
 
-buttonAfter.addEventListener("click", function() {
-  slider.classList.remove("slider--before");
-  slider.classList.add("slider--after");
-});
+  buttonBefore.addEventListener("click", function () {
+    slider.classList.remove("slider--after");
+    slider.classList.add("slider--before");
+  });
+
+  buttonAfter.addEventListener("click", function () {
+    slider.classList.remove("slider--before");
+    slider.classList.add("slider--after");
+  });
+}
+
+/*валидация формы*/
+
+var form = document.querySelector(".form");
+
+if (form) {
+  form.addEventListener("invalid", function (evt) {
+    form.classList.add("form--invalid");
+  }, true);
+}
